@@ -23,7 +23,7 @@ def parse_args():
                         " data file to write. Defaults to standard output")
     parser.add_argument("-d", "--delimiter", default="", help="Set character "
                         "used for field delimiter. Defaults to autodetect")
-    parser.add_argument("-q", "--quote", default="", help="Sxet character used"
+    parser.add_argument("-q", "--quote", default="", help="Set character used"
                         " for quoting fields. Defaults to autodetect")
     return parser.parse_args()
 
