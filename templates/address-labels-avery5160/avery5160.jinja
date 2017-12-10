@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="avery5160.css" />
+</head>
+<body>
+{% for row in sheet %}
+<section class="vcard">
+   <div class="fn">{{row[0]}}</div> 
+   <div class="adr"> 
+      <div class="street-address">{{row[1]}}</div> 
+      <div class="street-address">{{row[2]}}</div> 
+      <span class="locality">{{row[3]}}</span >  
+      <span class="region">{{row[4]}}</span >  
+      <span class="postal-code">{{row[5]}}</span > 
+   </div> 
+</section>
+{% endfor %}
+</body>
+</html>
+
+

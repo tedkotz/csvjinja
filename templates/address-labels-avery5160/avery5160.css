@@ -1,0 +1,62 @@
+* {
+ box-sizing: border-box;
+ border: none;
+ padding: 0;
+ margin: 0;
+}
+
+body, html {
+ width: 8.5in;
+/* height: 11in;
+*/
+ padding: 0;
+ margin: 0;
+ font:  bold 10pt sans-serif;
+ color: red;
+}
+
+body>section {
+ width: 2.625in;
+ height: 1in;
+ position: absolute;
+ padding: 0.0625in;
+ border: solid 1px transparent;
+ background-image: url('background.svg');
+ background-repeat: no-repeat;
+ background-attachment: relative;
+ background-position: right center;
+ background-size: auto 0.75in;
+}
+
+.adr {
+  color: black;
+}
+
+body>section:nth-of-type(3n+1)  { left: 2.6mm;   }
+body>section:nth-of-type(3n+2)  { left: 72.6mm;  }
+body>section:nth-of-type(3n+3)  { left: 142.6mm; }
+
+
+body>section:nth-of-type(n+1)  { top: 0.5in; }
+body>section:nth-of-type(n+4)  { top: 1.5in; }
+body>section:nth-of-type(n+7)  { top: 2.5in; }
+body>section:nth-of-type(n+10) { top: 3.5in; }
+body>section:nth-of-type(n+13) { top: 4.5in; }
+body>section:nth-of-type(n+16) { top: 5.5in; }
+body>section:nth-of-type(n+19) { top: 6.5in; }
+body>section:nth-of-type(n+22) { top: 7.5in; }
+body>section:nth-of-type(n+25) { top: 8.5in; }
+body>section:nth-of-type(n+28) { top: 9.5in; }
+/* printing doesn't works beyound this point */
+body>section:nth-of-type(n+31) { top: 11.5in; }
+body>section:nth-of-type(n+34) { top: 12.5in; }
+body>section:nth-of-type(n+37) { top: 13.5in; }
+body>section:nth-of-type(n+40) { top: 14.5in; }
+body>section:nth-of-type(n+43) { top: 15.5in; }
+body>section:nth-of-type(n+46) { top: 16.5in; }
+
+@page  
+{ 
+  size: auto;
+  margin: 0;  
+} 
