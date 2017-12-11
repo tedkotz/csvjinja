@@ -24,7 +24,7 @@ csvjinja.py [-h] [-d DELIMITER] [-q QUOTE] template_file [csv_file] [output_file
 ### optional arguments:
 <dl>
   <dt>-h, --help</dt>
-  <dd>show this help message and exit</dd>
+  <dd>Show this help message and exit</dd>
  
   <dt>-d DELIMITER, --delimiter DELIMITER</dt>
   <dd>Set character used for field delimiter. Defaults to autodetect</dd>
@@ -35,7 +35,7 @@ csvjinja.py [-h] [-d DELIMITER] [-q QUOTE] template_file [csv_file] [output_file
 
 ## Features
 * CSV file available in template as `sheet`
-* Command line arguments are available in template as `args`
+* Command line arguments available in template as `args`
 
 ## Requirements
 * Python
@@ -44,3 +44,4 @@ csvjinja.py [-h] [-d DELIMITER] [-q QUOTE] template_file [csv_file] [output_file
 ## Todo
 * Store max column size for use in template formatting
 * Support for arbitrary command line parameter passing into template
+* Could a more functional approach to the design cut down the number of passes through the CSV file
