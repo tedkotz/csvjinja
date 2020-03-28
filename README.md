@@ -1,5 +1,5 @@
 # csvjinja
-A python tool to generically apply the contents of a CVS file to a Jinja2 template.
+A python tool to generically apply the contents of a CSV file to a Jinja2 template.
 
 The data from the CSV file is read in and applied to the template as a 2 dimensional array called `sheet`.
 
@@ -44,4 +44,6 @@ csvjinja.py [-h] [-d DELIMITER] [-q QUOTE] template_file [csv_file] [output_file
 ## Todo
 * Store max column size for use in template formatting
 * Support for arbitrary command line parameter passing into template
-* Could a more functional approach to the design cut down the number of passes through the CSV file
+* Cut down the number of passes through the CSV file
+    * Could a more functional approach to the design do the job?
+    * Maybe grab more state info on first pass?
