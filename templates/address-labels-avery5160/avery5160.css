@@ -4,31 +4,34 @@
  margin: 0;
 }
 
-body, html {
+html {
  font:  bold 11pt sans-serif;
  color: red;
 }
 
-.page {
+body {
  display: grid;
- grid-template-columns: 2.75in 2.75in 2.75in;
- grid-column-gap: 0;
+ grid-template-columns: 2.625in 2.625in 2.625in;
+ grid-column-gap: 0.125in;
  grid-row-gap: 0;
- width: 8.5in;
-/* height: 10in; */
- padding: 0.5in 0.125in;
+ width: 8.125in;
 }
 
-.page>section {
+.vcard {
+ /* width+height+padding = 2.625x1 */
  width: 2in;
- height: 0.7in;
- /* border: solid 1px black; */
- padding: 0.15in 0.5in 0.15in 0.25in;
- background-image: url('background.svg');
+ height: 0.75in;
+ padding: 0.125in 0.425in 0.125in 0.2in;
  background-repeat: no-repeat;
- background-attachment: relative;
- background-position: 95% 50%;
+ background-attachment: local;
  background-size: auto 75%;
+ /* image name and position */
+ background-image: url('background.svg');
+ background-position: 1.85in 50%;
+}
+
+.vcard:nth-of-type(30n) {
+  break-after: page;
 }
 
 .adr {
@@ -39,5 +42,7 @@ body, html {
 @page
 {
   size: letter portrait;
-  margin: 0;
+  /* body(width+height)+page(margin) = 8.5x11 */
+  /* At the default 96 pix/in the rendered size of a page should be 816x1056 */
+  margin: 0.5in 0.1875in;
 }

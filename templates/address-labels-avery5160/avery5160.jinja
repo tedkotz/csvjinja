@@ -4,22 +4,17 @@
   <link rel="stylesheet" type="text/css" href="avery5160.css" />
 </head>
 <body>
-{% set pages = sheet|batch(30) %}
-{% for page in pages %}
-<div class="page">
-{% for row in page %}
-    <section class="vcard">
-       <div class="fn">{{row[0]}}</div>
-       <div class="adr">
-          <div class="street-address">{{row[1]}}</div>
-          <div class="street-address">{{row[2]}}</div>
-          <span class="locality">{{row[3]}}</span >
-          <span class="region">{{row[4]}}</span >
-          <span class="postal-code">{{row[5]}}</span >
-       </div>
-    </section>
-{% endfor %}
-</div>
+{% for row in sheet %}
+  <section class="vcard">
+     <div class="fn">{{row[0]}}</div>
+     <div class="adr">
+        <div class="street-address">{{row[1]}}</div>
+        <div class="street-address">{{row[2]}}</div>
+        <span class="locality">{{row[3]}}</span >
+        <span class="region">{{row[4]}}</span >
+        <span class="postal-code">{{row[5]}}</span >
+     </div>
+  </section>
 {% endfor %}
 </body>
 </html>
