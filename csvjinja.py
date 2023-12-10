@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """ Provides the base plumbing needed to pipe csv into jinga2 templates. """
 
 # Imports
@@ -7,7 +7,7 @@ import csv
 import jinja2
 import argparse
 import copy
-import StringIO
+import io
 
 # Constants and Data Tables
 
@@ -73,11 +73,11 @@ def main():
 
     # load csvfile into sheet
     if args.csv_file == "-":
-        input_wrapper = StringIO.StringIO(sys.stdin.read())
+        input_wrapper = io.StringIO(sys.stdin.read())
         sheet = get_sheet(input_wrapper, args)
         input_wrapper.close()
     else:
-        with open(args.csv_file, 'rb') as file_in:
+        with open(args.csv_file, 'r') as file_in:
             sheet = get_sheet(file_in, args)
 
     # run jinja2 template with sheet
@@ -86,9 +86,9 @@ def main():
 
     # save output
     if args.output_file == "-":
-        print template.render(template_vars)
+        print (template.render(template_vars))
     else:
-        with open(args.output_file, 'wb') as file_out:
+        with open(args.output_file, 'w') as file_out:
             file_out.write(template.render(template_vars))
 
 # Standard Main call to avoid global namespace
